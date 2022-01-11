@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ESTIMATEModelStoreContainer" CdmEntityContainer="ESTIMATEEntities">
+    <FunctionImportMapping FunctionImportName="SP_ItemSelection" FunctionName="ESTIMATEModel.Store.SP_ItemSelection">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ESTIMATEModel.SP_ItemSelection_Result">
+          <ScalarProperty Name="I_Name" ColumnName="I_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CatagoryInfoes">
+      <EntityTypeMapping TypeName="ESTIMATEModel.CatagoryInfo">
+        <MappingFragment StoreEntitySet="CatagoryInfo">
+          <ScalarProperty Name="C_Name" ColumnName="C_Name" />
+          <ScalarProperty Name="CatagoryId" ColumnName="CatagoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomarInfoes">
+      <EntityTypeMapping TypeName="ESTIMATEModel.CustomarInfo">
+        <MappingFragment StoreEntitySet="CustomarInfo">
+          <ScalarProperty Name="C_Type" ColumnName="C_Type" />
+          <ScalarProperty Name="C_Phone" ColumnName="C_Phone" />
+          <ScalarProperty Name="C_Address" ColumnName="C_Address" />
+          <ScalarProperty Name="C_Name" ColumnName="C_Name" />
+          <ScalarProperty Name="CustomarId" ColumnName="CustomarId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpolyDipartments">
+      <EntityTypeMapping TypeName="ESTIMATEModel.EmpolyDipartment">
+        <MappingFragment StoreEntitySet="EmpolyDipartment">
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpolyInfoes">
+      <EntityTypeMapping TypeName="ESTIMATEModel.EmpolyInfo">
+        <MappingFragment StoreEntitySet="EmpolyInfo">
+          <ScalarProperty Name="E_Department" ColumnName="E_Department" />
+          <ScalarProperty Name="E_Phone" ColumnName="E_Phone" />
+          <ScalarProperty Name="E_JoinDate" ColumnName="E_JoinDate" />
+          <ScalarProperty Name="E_DateOfBirth" ColumnName="E_DateOfBirth" />
+          <ScalarProperty Name="E_Address" ColumnName="E_Address" />
+          <ScalarProperty Name="E_Name" ColumnName="E_Name" />
+          <ScalarProperty Name="EmpolyId" ColumnName="EmpolyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemInfoes">
+      <EntityTypeMapping TypeName="ESTIMATEModel.ItemInfo">
+        <MappingFragment StoreEntitySet="ItemInfo">
+          <ScalarProperty Name="I_BuyPrice" ColumnName="I_BuyPrice" />
+          <ScalarProperty Name="I_MgfDate" ColumnName="I_MgfDate" />
+          <ScalarProperty Name="I_ExoDate" ColumnName="I_ExoDate" />
+          <ScalarProperty Name="I_CatagoryId" ColumnName="I_CatagoryId" />
+          <ScalarProperty Name="I_Name" ColumnName="I_Name" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="numbers">
+      <EntityTypeMapping TypeName="ESTIMATEModel.number">
+        <MappingFragment StoreEntitySet="number">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderInfoes">
+      <EntityTypeMapping TypeName="ESTIMATEModel.OrderInfo">
+        <MappingFragment StoreEntitySet="OrderInfo">
+          <ScalarProperty Name="TotalMoney" ColumnName="TotalMoney" />
+          <ScalarProperty Name="AdvancePay" ColumnName="AdvancePay" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="CustomarId" ColumnName="CustomarId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleInfoes">
+      <EntityTypeMapping TypeName="ESTIMATEModel.SaleInfo">
+        <MappingFragment StoreEntitySet="SaleInfo">
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="SaleId" ColumnName="SaleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SelayInformations">
+      <EntityTypeMapping TypeName="ESTIMATEModel.SelayInformation">
+        <MappingFragment StoreEntitySet="SelayInformation">
+          <ScalarProperty Name="Ammount" ColumnName="Ammount" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="EmployId" ColumnName="EmployId" />
+          <ScalarProperty Name="SelaryId" ColumnName="SelaryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ESTIMATEModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ESTIMATEModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ESTIMATEEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="SP_ItemSelection" ReturnType="Collection(ESTIMATEModel.SP_ItemSelection_Result)">
+      <Parameter Name="catId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="CatagoryInfoes" EntityType="ESTIMATEModel.CatagoryInfo" />
+    <EntitySet Name="CustomarInfoes" EntityType="ESTIMATEModel.CustomarInfo" />
+    <EntitySet Name="EmpolyDipartments" EntityType="ESTIMATEModel.EmpolyDipartment" />
+    <EntitySet Name="EmpolyInfoes" EntityType="ESTIMATEModel.EmpolyInfo" />
+    <EntitySet Name="ItemInfoes" EntityType="ESTIMATEModel.ItemInfo" />
+    <EntitySet Name="numbers" EntityType="ESTIMATEModel.number" />
+    <EntitySet Name="OrderInfoes" EntityType="ESTIMATEModel.OrderInfo" />
+    <EntitySet Name="SaleInfoes" EntityType="ESTIMATEModel.SaleInfo" />
+    <EntitySet Name="SelayInformations" EntityType="ESTIMATEModel.SelayInformation" />
+    <EntitySet Name="sysdiagrams" EntityType="ESTIMATEModel.sysdiagram" />
+    <AssociationSet Name="FK_ItemInfo_CatagoryInfo" Association="ESTIMATEModel.FK_ItemInfo_CatagoryInfo">
+      <End Role="CatagoryInfo" EntitySet="CatagoryInfoes" />
+      <End Role="ItemInfo" EntitySet="ItemInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleInfo_CatagoryInfo" Association="ESTIMATEModel.FK_SaleInfo_CatagoryInfo">
+      <End Role="CatagoryInfo" EntitySet="CatagoryInfoes" />
+      <End Role="SaleInfo" EntitySet="SaleInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderInfo_CustomarInfo" Association="ESTIMATEModel.FK_OrderInfo_CustomarInfo">
+      <End Role="CustomarInfo" EntitySet="CustomarInfoes" />
+      <End Role="OrderInfo" EntitySet="OrderInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleInfo_CustomarInfo" Association="ESTIMATEModel.FK_SaleInfo_CustomarInfo">
+      <End Role="CustomarInfo" EntitySet="CustomarInfoes" />
+      <End Role="SaleInfo" EntitySet="SaleInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpolyInfo_EmpolyDipartment" Association="ESTIMATEModel.FK_EmpolyInfo_EmpolyDipartment">
+      <End Role="EmpolyDipartment" EntitySet="EmpolyDipartments" />
+      <End Role="EmpolyInfo" EntitySet="EmpolyInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SelayInformation_EmpolyInfo" Association="ESTIMATEModel.FK_SelayInformation_EmpolyInfo">
+      <End Role="EmpolyInfo" EntitySet="EmpolyInfoes" />
+      <End Role="SelayInformation" EntitySet="SelayInformations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderInfo_ItemInfo" Association="ESTIMATEModel.FK_OrderInfo_ItemInfo">
+      <End Role="ItemInfo" EntitySet="ItemInfoes" />
+      <End Role="OrderInfo" EntitySet="OrderInfoes" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="SP_ItemSelection_Result">
+    <Property Type="String" Name="I_Name" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="CatagoryInfo">
+    <Key>
+      <PropertyRef Name="CatagoryId" />
+    </Key>
+    <Property Type="Int32" Name="CatagoryId" Nullable="false" />
+    <Property Type="String" Name="C_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ItemInfoes" Relationship="ESTIMATEModel.FK_ItemInfo_CatagoryInfo" FromRole="CatagoryInfo" ToRole="ItemInfo" />
+    <NavigationProperty Name="SaleInfoes" Relationship="ESTIMATEModel.FK_SaleInfo_CatagoryInfo" FromRole="CatagoryInfo" ToRole="SaleInfo" />
+  </EntityType>
+  <EntityType Name="CustomarInfo">
+    <Key>
+      <PropertyRef Name="CustomarId" />
+    </Key>
+    <Property Type="Int32" Name="CustomarId" Nullable="false" />
+    <Property Type="String" Name="C_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="C_Address" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="C_Phone" />
+    <Property Type="String" Name="C_Type" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OrderInfoes" Relationship="ESTIMATEModel.FK_OrderInfo_CustomarInfo" FromRole="CustomarInfo" ToRole="OrderInfo" />
+    <NavigationProperty Name="SaleInfoes" Relationship="ESTIMATEModel.FK_SaleInfo_CustomarInfo" FromRole="CustomarInfo" ToRole="SaleInfo" />
+  </EntityType>
+  <EntityType Name="EmpolyDipartment">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Type="Int32" Name="DepartmentId" Nullable="false" />
+    <Property Type="String" Name="DepartmentName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EmpolyInfoes" Relationship="ESTIMATEModel.FK_EmpolyInfo_EmpolyDipartment" FromRole="EmpolyDipartment" ToRole="EmpolyInfo" />
+  </EntityType>
+  <EntityType Name="EmpolyInfo">
+    <Key>
+      <PropertyRef Name="EmpolyId" />
+    </Key>
+    <Property Type="Int32" Name="EmpolyId" Nullable="false" />
+    <Property Type="String" Name="E_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="E_Address" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="E_DateOfBirth" />
+    <Property Type="DateTime" Name="E_JoinDate" />
+    <Property Type="Int32" Name="E_Phone" />
+    <Property Type="Int32" Name="E_Department" />
+    <NavigationProperty Name="EmpolyDipartment" Relationship="ESTIMATEModel.FK_EmpolyInfo_EmpolyDipartment" FromRole="EmpolyInfo" ToRole="EmpolyDipartment" />
+    <NavigationProperty Name="SelayInformations" Relationship="ESTIMATEModel.FK_SelayInformation_EmpolyInfo" FromRole="EmpolyInfo" ToRole="SelayInformation" />
+  </EntityType>
+  <EntityType Name="ItemInfo">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Type="Int32" Name="ItemId" Nullable="false" />
+    <Property Type="String" Name="I_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="I_CatagoryId" />
+    <Property Type="DateTime" Name="I_ExoDate" />
+    <Property Type="DateTime" Name="I_MgfDate" />
+    <Property Type="Decimal" Name="I_BuyPrice" Precision="19" Scale="4" />
+    <NavigationProperty Name="CatagoryInfo" Relationship="ESTIMATEModel.FK_ItemInfo_CatagoryInfo" FromRole="ItemInfo" ToRole="CatagoryInfo" />
+    <NavigationProperty Name="OrderInfoes" Relationship="ESTIMATEModel.FK_OrderInfo_ItemInfo" FromRole="ItemInfo" ToRole="OrderInfo" />
+  </EntityType>
+  <EntityType Name="number">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="name" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OrderInfo">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Type="Int32" Name="OrderId" Nullable="false" />
+    <Property Type="Int32" Name="CustomarId" />
+    <Property Type="Int32" Name="ItemId" />
+    <Property Type="DateTime" Name="OrderDate" />
+    <Property Type="DateTime" Name="DeliveryDate" />
+    <Property Type="Int32" Name="Quantity" />
+    <Property Type="Decimal" Name="AdvancePay" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TotalMoney" Precision="19" Scale="4" />
+    <NavigationProperty Name="CustomarInfo" Relationship="ESTIMATEModel.FK_OrderInfo_CustomarInfo" FromRole="OrderInfo" ToRole="CustomarInfo" />
+    <NavigationProperty Name="ItemInfo" Relationship="ESTIMATEModel.FK_OrderInfo_ItemInfo" FromRole="OrderInfo" ToRole="ItemInfo" />
+  </EntityType>
+  <EntityType Name="SaleInfo">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Type="Int32" Name="SaleId" Nullable="false" />
+    <Property Type="Int32" Name="CustomerId" />
+    <Property Type="Int32" Name="CategoryId" />
+    <Property Type="Decimal" Name="UnitPrice" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="Quantity" />
+    <Property Type="DateTime" Name="SaleDate" />
+    <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CatagoryInfo" Relationship="ESTIMATEModel.FK_SaleInfo_CatagoryInfo" FromRole="SaleInfo" ToRole="CatagoryInfo" />
+    <NavigationProperty Name="CustomarInfo" Relationship="ESTIMATEModel.FK_SaleInfo_CustomarInfo" FromRole="SaleInfo" ToRole="CustomarInfo" />
+  </EntityType>
+  <EntityType Name="SelayInformation">
+    <Key>
+      <PropertyRef Name="SelaryId" />
+    </Key>
+    <Property Type="Int32" Name="SelaryId" Nullable="false" />
+    <Property Type="Int32" Name="EmployId" />
+    <Property Type="DateTime" Name="Date" />
+    <Property Type="Int32" Name="Department" />
+    <Property Type="Decimal" Name="Ammount" Precision="19" Scale="4" />
+    <NavigationProperty Name="EmpolyInfo" Relationship="ESTIMATEModel.FK_SelayInformation_EmpolyInfo" FromRole="SelayInformation" ToRole="EmpolyInfo" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_ItemInfo_CatagoryInfo">
+    <End Type="ESTIMATEModel.CatagoryInfo" Role="CatagoryInfo" Multiplicity="0..1" />
+    <End Type="ESTIMATEModel.ItemInfo" Role="ItemInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatagoryInfo">
+        <PropertyRef Name="CatagoryId" />
+      </Principal>
+      <Dependent Role="ItemInfo">
+        <PropertyRef Name="I_CatagoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleInfo_CatagoryInfo">
+    <End Type="ESTIMATEModel.CatagoryInfo" Role="CatagoryInfo" Multiplicity="0..1" />
+    <End Type="ESTIMATEModel.SaleInfo" Role="SaleInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatagoryInfo">
+        <PropertyRef Name="CatagoryId" />
+      </Principal>
+      <Dependent Role="SaleInfo">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderInfo_CustomarInfo">
+    <End Type="ESTIMATEModel.CustomarInfo" Role="CustomarInfo" Multiplicity="0..1" />
+    <End Type="ESTIMATEModel.OrderInfo" Role="OrderInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomarInfo">
+        <PropertyRef Name="CustomarId" />
+      </Principal>
+      <Dependent Role="OrderInfo">
+        <PropertyRef Name="CustomarId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleInfo_CustomarInfo">
+    <End Type="ESTIMATEModel.CustomarInfo" Role="CustomarInfo" Multiplicity="0..1" />
+    <End Type="ESTIMATEModel.SaleInfo" Role="SaleInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomarInfo">
+        <PropertyRef Name="CustomarId" />
+      </Principal>
+      <Dependent Role="SaleInfo">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpolyInfo_EmpolyDipartment">
+    <End Type="ESTIMATEModel.EmpolyDipartment" Role="EmpolyDipartment" Multiplicity="0..1" />
+    <End Type="ESTIMATEModel.EmpolyInfo" Role="EmpolyInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpolyDipartment">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="EmpolyInfo">
+        <PropertyRef Name="E_Department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SelayInformation_EmpolyInfo">
+    <End Type="ESTIMATEModel.EmpolyInfo" Role="EmpolyInfo" Multiplicity="0..1" />
+    <End Type="ESTIMATEModel.SelayInformation" Role="SelayInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpolyInfo">
+        <PropertyRef Name="EmpolyId" />
+      </Principal>
+      <Dependent Role="SelayInformation">
+        <PropertyRef Name="EmployId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderInfo_ItemInfo">
+    <End Type="ESTIMATEModel.ItemInfo" Role="ItemInfo" Multiplicity="0..1" />
+    <End Type="ESTIMATEModel.OrderInfo" Role="OrderInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemInfo">
+        <PropertyRef Name="ItemId" />
+      </Principal>
+      <Dependent Role="OrderInfo">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ESTIMATEModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ESTIMATEEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="SP_ItemSelection" ReturnType="Collection(ESTIMATEModel.SP_ItemSelection_Result)">
+      <Parameter Name="catId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="DepartmentInfoes" EntityType="ESTIMATEModel.DepartmentInfo" />
+    <EntitySet Name="GenderInfoes" EntityType="ESTIMATEModel.GenderInfo" />
+    <EntitySet Name="PurposeInfoes" EntityType="ESTIMATEModel.PurposeInfo" />
+    <EntitySet Name="SemisterInfoes" EntityType="ESTIMATEModel.SemisterInfo" />
+    <EntitySet Name="ShiftInfoes" EntityType="ESTIMATEModel.ShiftInfo" />
+    <EntitySet Name="StudentInformations" EntityType="ESTIMATEModel.StudentInformation" />
+    <EntitySet Name="sysdiagrams" EntityType="ESTIMATEModel.sysdiagram" />
+    <AssociationSet Name="FK_StudentInformation_DepartmentInfo" Association="ESTIMATEModel.FK_StudentInformation_DepartmentInfo">
+      <End Role="DepartmentInfo" EntitySet="DepartmentInfoes" />
+      <End Role="StudentInformation" EntitySet="StudentInformations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentInformation_GenderInfo" Association="ESTIMATEModel.FK_StudentInformation_GenderInfo">
+      <End Role="GenderInfo" EntitySet="GenderInfoes" />
+      <End Role="StudentInformation" EntitySet="StudentInformations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentInformation_SemisterInfo" Association="ESTIMATEModel.FK_StudentInformation_SemisterInfo">
+      <End Role="SemisterInfo" EntitySet="SemisterInfoes" />
+      <End Role="StudentInformation" EntitySet="StudentInformations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentInformation_ShiftInfo" Association="ESTIMATEModel.FK_StudentInformation_ShiftInfo">
+      <End Role="ShiftInfo" EntitySet="ShiftInfoes" />
+      <End Role="StudentInformation" EntitySet="StudentInformations" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="SP_ItemSelection_Result">
+    <Property Type="String" Name="I_Name" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="DepartmentInfo">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Type="Int32" Name="DepartmentId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="DepartmentName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="StudentInformations" Relationship="ESTIMATEModel.FK_StudentInformation_DepartmentInfo" FromRole="DepartmentInfo" ToRole="StudentInformation" />
+  </EntityType>
+  <EntityType Name="GenderInfo">
+    <Key>
+      <PropertyRef Name="GenderId" />
+    </Key>
+    <Property Type="Int32" Name="GenderId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="GenderName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="StudentInformations" Relationship="ESTIMATEModel.FK_StudentInformation_GenderInfo" FromRole="GenderInfo" ToRole="StudentInformation" />
+  </EntityType>
+  <EntityType Name="PurposeInfo">
+    <Key>
+      <PropertyRef Name="PurposeId" />
+    </Key>
+    <Property Type="Int32" Name="PurposeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PurposeName" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SemisterInfo">
+    <Key>
+      <PropertyRef Name="SemisterId" />
+    </Key>
+    <Property Type="Int32" Name="SemisterId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SemisterName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="StudentInformations" Relationship="ESTIMATEModel.FK_StudentInformation_SemisterInfo" FromRole="SemisterInfo" ToRole="StudentInformation" />
+  </EntityType>
+  <EntityType Name="ShiftInfo">
+    <Key>
+      <PropertyRef Name="ShiftId" />
+    </Key>
+    <Property Type="Int32" Name="ShiftId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ShiftName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="StudentInformations" Relationship="ESTIMATEModel.FK_StudentInformation_ShiftInfo" FromRole="ShiftInfo" ToRole="StudentInformation" />
+  </EntityType>
+  <EntityType Name="StudentInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Roll" />
+    <Property Type="Int32" Name="Registration" />
+    <Property Type="Int32" Name="SemisterId" />
+    <Property Type="Int32" Name="ShiftId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="Int32" Name="GenderId" />
+    <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Phone" />
+    <Property Type="DateTime" Name="DateOfBirth" />
+    <NavigationProperty Name="DepartmentInfo" Relationship="ESTIMATEModel.FK_StudentInformation_DepartmentInfo" FromRole="StudentInformation" ToRole="DepartmentInfo" />
+    <NavigationProperty Name="GenderInfo" Relationship="ESTIMATEModel.FK_StudentInformation_GenderInfo" FromRole="StudentInformation" ToRole="GenderInfo" />
+    <NavigationProperty Name="SemisterInfo" Relationship="ESTIMATEModel.FK_StudentInformation_SemisterInfo" FromRole="StudentInformation" ToRole="SemisterInfo" />
+    <NavigationProperty Name="ShiftInfo" Relationship="ESTIMATEModel.FK_StudentInformation_ShiftInfo" FromRole="StudentInformation" ToRole="ShiftInfo" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_StudentInformation_DepartmentInfo">
+    <End Type="ESTIMATEModel.DepartmentInfo" Role="DepartmentInfo" Multiplicity="0..1" />
+    <End Type="ESTIMATEModel.StudentInformation" Role="StudentInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepartmentInfo">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="StudentInformation">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentInformation_GenderInfo">
+    <End Type="ESTIMATEModel.GenderInfo" Role="GenderInfo" Multiplicity="0..1" />
+    <End Type="ESTIMATEModel.StudentInformation" Role="StudentInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GenderInfo">
+        <PropertyRef Name="GenderId" />
+      </Principal>
+      <Dependent Role="StudentInformation">
+        <PropertyRef Name="GenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentInformation_SemisterInfo">
+    <End Type="ESTIMATEModel.SemisterInfo" Role="SemisterInfo" Multiplicity="0..1" />
+    <End Type="ESTIMATEModel.StudentInformation" Role="StudentInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SemisterInfo">
+        <PropertyRef Name="SemisterId" />
+      </Principal>
+      <Dependent Role="StudentInformation">
+        <PropertyRef Name="SemisterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentInformation_ShiftInfo">
+    <End Type="ESTIMATEModel.ShiftInfo" Role="ShiftInfo" Multiplicity="0..1" />
+    <End Type="ESTIMATEModel.StudentInformation" Role="StudentInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShiftInfo">
+        <PropertyRef Name="ShiftId" />
+      </Principal>
+      <Dependent Role="StudentInformation">
+        <PropertyRef Name="ShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

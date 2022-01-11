@@ -1,0 +1,328 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="ADB69331-7AB7-4D27-8A26-3227F538B16E/f:Manager.cs" caret="1745" fromTop="19" />
+      <File id="ADB69331-7AB7-4D27-8A26-3227F538B16E/f:OrderFrom.cs" caret="1086" fromTop="23" />
+    </RecentFiles>
+    <RecentEdits />
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="MotherFrom`0" priority="0" />
+      <Item value="var" priority="79" />
+      <Item value="new" priority="62" />
+      <Item value="AddCustomar`0" priority="2" />
+      <Item value="obj" priority="22" />
+      <Item value="public" priority="5" />
+      <Item value="ESTIMATEEntities`0" priority="18" />
+      <Item value="CustomarInfo`0" priority="1" />
+      <Item value="objcustomar" priority="5" />
+      <Item value="Convert`0" priority="46" />
+      <Item value="txtId" priority="8" />
+      <Item value="txtName" priority="7" />
+      <Item value="txtAddress" priority="3" />
+      <Item value="txtPhone" priority="3" />
+      <Item value="txtType" priority="1" />
+      <Item value="objEstimate" priority="12" />
+      <Item value="MessageBox`0" priority="13" />
+      <Item value="this" priority="13" />
+      <Item value="AddCatagory`0" priority="2" />
+      <Item value="CatagoryInfo`0" priority="3" />
+      <Item value="objcatagory" priority="3" />
+      <Item value="AddItem`0" priority="4" />
+      <Item value="ItemInfo`0" priority="1" />
+      <Item value="objItem" priority="10" />
+      <Item value="dtpExpDate" priority="1" />
+      <Item value="DateTime`0" priority="9" />
+      <Item value="dtpMgfDate" priority="2" />
+      <Item value="txtBuyPrice" priority="1" />
+      <Item value="Manager`0" priority="9" />
+      <Item value="BuyManager" priority="0" />
+      <Item value="List" priority="4" />
+      <Item value="from" priority="7" />
+      <Item value="context" priority="8" />
+      <Item value="select" priority="6" />
+      <Item value="cat" priority="0" />
+      <Item value="return" priority="8" />
+      <Item value="q" priority="9" />
+      <Item value="cbxCatagory" priority="14" />
+      <Item value="list" priority="11" />
+      <Item value="try" priority="6" />
+      <Item value="DataTableClearEventArgs`0" priority="1" />
+      <Item value="string" priority="33" />
+      <Item value="objCatagory" priority="2" />
+      <Item value="txtCId" priority="1" />
+      <Item value="txtCName" priority="1" />
+      <Item value="CbxCategory" priority="3" />
+      <Item value="mngr" priority="1" />
+      <Item value="cus" priority="0" />
+      <Item value="cbxCustomer" priority="4" />
+      <Item value="SaleForm`0" priority="0" />
+      <Item value="obje" priority="0" />
+      <Item value="CbxItemName" priority="3" />
+      <Item value="cateId" priority="0" />
+      <Item value="SellsInfo`0" priority="4" />
+      <Item value="cbxItemName" priority="14" />
+      <Item value="FillCategory`0" priority="0" />
+      <Item value="mng" priority="2" />
+      <Item value="cbxCustomarId" priority="4" />
+      <Item value="int" priority="0" />
+      <Item value="catId" priority="1" />
+      <Item value="SP_ItemSelection_Result`0" priority="0" />
+      <Item value="item" priority="0" />
+      <Item value="objSells" priority="19" />
+      <Item value="SaleInfo`0" priority="0" />
+      <Item value="dtpSalesDate" priority="1" />
+      <Item value="txtPrice" priority="2" />
+      <Item value="txtWuantity" priority="1" />
+      <Item value="OrderFrom`0" priority="2" />
+      <Item value="dtpOrderDate" priority="1" />
+      <Item value="dtpDeliveryDate" priority="1" />
+      <Item value="OrderManager" priority="1" />
+      <Item value="c" priority="0" />
+      <Item value="cbxCustomarName" priority="4" />
+      <Item value="i" priority="0" />
+      <Item value="OrderInfo`0" priority="0" />
+      <Item value="orderObj" priority="0" />
+      <Item value="txtOrderid" priority="1" />
+      <Item value="Objorder" priority="7" />
+      <Item value="txtQuantity" priority="3" />
+      <Item value="txtAdvance" priority="1" />
+      <Item value="txtTotal" priority="1" />
+      <Item value="estimateObj" priority="1" />
+      <Item value="Sell`0" priority="1" />
+      <Item value="txtid" priority="1" />
+      <Item value="DtpDate" priority="1" />
+      <Item value="Others`0" priority="0" />
+      <Item value="EmployInformation`0" priority="2" />
+      <Item value="EmpolyDipartment`0" priority="2" />
+      <Item value="objDepart" priority="4" />
+      <Item value="txtEDId" priority="1" />
+      <Item value="txtEDepartmentName" priority="1" />
+      <Item value="objEst" priority="2" />
+      <Item value="EmpolyInfo`0" priority="2" />
+      <Item value="EmpolyInformation`0" priority="0" />
+      <Item value="d" priority="0" />
+      <Item value="cbxDepartment" priority="9" />
+      <Item value="objEmpoly" priority="9" />
+      <Item value="txtID" priority="1" />
+      <Item value="dtpDateOfBirth" priority="0" />
+      <Item value="dtpJoinDate" priority="0" />
+      <Item value="SelaryInformation`0" priority="3" />
+      <Item value="objMgnr" priority="0" />
+      <Item value="objMngr" priority="0" />
+      <Item value="EN" priority="0" />
+      <Item value="cbxEmployName" priority="3" />
+      <Item value="objSalary" priority="0" />
+      <Item value="txtSelaryId" priority="1" />
+      <Item value="objSal" priority="0" />
+      <Item value="txtItemName" priority="0" />
+      <Item value="objselary" priority="0" />
+      <Item value="SelayInformation`0" priority="0" />
+      <Item value="objslry" priority="5" />
+      <Item value="dtpSelaryDate" priority="0" />
+      <Item value="txtAmmount" priority="0" />
+      <Item value="objEsti" priority="1" />
+      <Item value="number`0" priority="0" />
+      <Item value="label1" priority="0" />
+      <Item value="label2" priority="0" />
+      <Item value="label3" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.AddCustomar">
+      <Item value="ShowDialog`0" priority="2" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.CustomarInfo">
+      <Item value="CustomarId" priority="0" />
+      <Item value="C_Name" priority="0" />
+      <Item value="C_Address" priority="0" />
+      <Item value="C_Phone" priority="0" />
+      <Item value="C_Type" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToInt32`0" priority="39" />
+      <Item value="ToDateTime`0" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="58" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Trim`0" priority="32" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.ESTIMATEEntities">
+      <Item value="AddToCustomarInfoes`0" priority="0" />
+      <Item value="SaveChanges`0" priority="10" />
+      <Item value="AddToCatagoryInfoes`0" priority="1" />
+      <Item value="CatagoryInfoes" priority="0" />
+      <Item value="AddToItemInfoes`0" priority="0" />
+      <Item value="CustomarInfoes" priority="1" />
+      <Item value="SP_ItemSelection`0" priority="1" />
+      <Item value="ItemInfoes" priority="2" />
+      <Item value="AddToSaleInfoes`0" priority="2" />
+      <Item value="AddToOrderInfoes`0" priority="0" />
+      <Item value="AddToEmpolyDipartments`0" priority="1" />
+      <Item value="EmpolyDipartments" priority="0" />
+      <Item value="AddToEmpolyInfoes`0" priority="0" />
+      <Item value="sysdiagrams" priority="0" />
+      <Item value="EmpolyInfoes" priority="0" />
+      <Item value="AddToSelayInformations`0" priority="0" />
+      <Item value="AddTonumbers`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="13" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.AddCatagory">
+      <Item value="ShowDialog`0" priority="2" />
+      <Item value="Close`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.CatagoryInfo">
+      <Item value="CatagoryId" priority="1" />
+      <Item value="C_Name" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.AddItem">
+      <Item value="ShowDialog`0" priority="2" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.ItemInfo">
+      <Item value="ItemId" priority="0" />
+      <Item value="I_Name" priority="0" />
+      <Item value="I_CatagoryId" priority="2" />
+      <Item value="I_ExoDate" priority="0" />
+      <Item value="I_MgfDate" priority="0" />
+      <Item value="I_BuyPrice" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DateTimePicker">
+      <Item value="Value" priority="14" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="ToList`1" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="DisplayMember" priority="10" />
+      <Item value="ValueMember" priority="23" />
+      <Item value="DataSource" priority="10" />
+      <Item value="SelectedValue" priority="17" />
+      <Item value="SelectedItem" priority="0" />
+      <Item value="SelectedIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="32" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.MotherFrom">
+      <Item value="Close`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.SaleForm">
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectResult`1">
+      <Item value="ToList`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="ToList`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.SellsInfo">
+      <Item value="ShowDialog`0" priority="2" />
+      <Item value="Close`0" priority="0" />
+      <Item value="txtId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.Manager">
+      <Item value="GetCustomer`0" priority="0" />
+      <Item value="GetAllItem`0" priority="1" />
+      <Item value="GettAllDepartment`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.SaleInfo">
+      <Item value="SaleId" priority="1" />
+      <Item value="SaleDate" priority="1" />
+      <Item value="CustomerId" priority="1" />
+      <Item value="ItemId" priority="1" />
+      <Item value="CategoryId" priority="1" />
+      <Item value="UnitPrice" priority="2" />
+      <Item value="Quantity" priority="1" />
+      <Item value="ItemName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.OrderFrom">
+      <Item value="Close`0" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.OrderInfo">
+      <Item value="OrderId" priority="0" />
+      <Item value="CustomarId" priority="0" />
+      <Item value="ItemId" priority="0" />
+      <Item value="OrderDate" priority="0" />
+      <Item value="DeliveryDate" priority="0" />
+      <Item value="Quantity" priority="0" />
+      <Item value="AdvancePay" priority="0" />
+      <Item value="TotalMoney" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.Sell">
+      <Item value="ShowDialog`0" priority="1" />
+      <Item value="Close`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.Others">
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.EmployInformation">
+      <Item value="ShowDialog`0" priority="1" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.EmpolyDipartment">
+      <Item value="DepartmentId" priority="0" />
+      <Item value="DepartmentName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.EmpolyInformation">
+      <Item value="ShowDialog`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.EmpolyInfo">
+      <Item value="EmpolyId" priority="0" />
+      <Item value="E_Name" priority="0" />
+      <Item value="E_Address" priority="0" />
+      <Item value="E_DateOfBirth" priority="0" />
+      <Item value="E_JoinDate" priority="0" />
+      <Item value="E_Phone" priority="0" />
+      <Item value="E_Department" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.SelaryInformation">
+      <Item value="ShowDialog`0" priority="0" />
+      <Item value="txtSelaryId" priority="3" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.SelayInformation">
+      <Item value="SelaryId" priority="0" />
+      <Item value="EmployId" priority="0" />
+      <Item value="Date" priority="0" />
+      <Item value="Department" priority="0" />
+      <Item value="Ammount" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BuySallsProject.number">
+      <Item value="name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToString`0" priority="2" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

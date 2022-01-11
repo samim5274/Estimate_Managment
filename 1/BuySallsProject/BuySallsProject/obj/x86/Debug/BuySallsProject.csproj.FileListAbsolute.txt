@@ -1,0 +1,51 @@
+C:\Users\Abdullah  IT  Zone\Desktop\BuySallsProject\BuySallsProject\bin\Debug\BuySallsProject.exe
+C:\Users\Abdullah  IT  Zone\Desktop\BuySallsProject\BuySallsProject\bin\Debug\BuySallsProject.pdb
+C:\Users\Abdullah  IT  Zone\Desktop\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.MotherFrom.resources
+C:\Users\Abdullah  IT  Zone\Desktop\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.Properties.Resources.resources
+C:\Users\Abdullah  IT  Zone\Desktop\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.csproj.GenerateResource.Cache
+C:\Users\Abdullah  IT  Zone\Desktop\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.exe
+C:\Users\Abdullah  IT  Zone\Desktop\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.pdb
+C:\Users\Abdullah  IT  Zone\Desktop\BuySallsProject\BuySallsProject\bin\Debug\BuySallsProject.exe.config
+C:\Users\Abdullah  IT  Zone\Desktop\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.AddCustomar.resources
+C:\Users\Abdullah  IT  Zone\Desktop\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.AddCatagory.resources
+C:\Users\Abdullah  IT  Zone\Desktop\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.AddItem.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\bin\Debug\BuySallsProject.exe.config
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.exe
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.pdb
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\bin\Debug\BuySallsProject.exe
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\bin\Debug\BuySallsProject.pdb
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.csprojResolveAssemblyReference.cache
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.AddCustomar.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.AddItem.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.MotherFrom.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.Properties.Resources.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.csproj.GenerateResource.Cache
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.AddCatagory.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.SaleForm.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.SellsInfo.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.OrderFrom.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.Sell.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.Others.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.EmpolyInformation.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.EmplyDepartment.resources
+E:\Softwer Devolopment\Estimate\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.SelaryInformation.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\bin\Debug\BuySallsProject.exe.config
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.exe
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.pdb
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\bin\Debug\BuySallsProject.exe
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\bin\Debug\BuySallsProject.pdb
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.csprojResolveAssemblyReference.cache
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.AddCatagory.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.AddCustomar.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.AddItem.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.EmplyDepartment.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.EmpolyInformation.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.MotherFrom.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.OrderFrom.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.Others.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.Properties.Resources.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.SaleForm.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.SelaryInformation.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.Sell.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.SellsInfo.resources
+E:\Softwer Devolopment\Estimate\1\BuySallsProject\BuySallsProject\obj\x86\Debug\BuySallsProject.csproj.GenerateResource.Cache

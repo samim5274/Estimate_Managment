@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ESTIMATEModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ESTIMATEModelStoreContainer">
+    <EntitySet Name="CatagoryInfo" EntityType="ESTIMATEModel.Store.CatagoryInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CustomarInfo" EntityType="ESTIMATEModel.Store.CustomarInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpolyDipartment" EntityType="ESTIMATEModel.Store.EmpolyDipartment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpolyInfo" EntityType="ESTIMATEModel.Store.EmpolyInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ItemInfo" EntityType="ESTIMATEModel.Store.ItemInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="number" EntityType="ESTIMATEModel.Store.number" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderInfo" EntityType="ESTIMATEModel.Store.OrderInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SaleInfo" EntityType="ESTIMATEModel.Store.SaleInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SelayInformation" EntityType="ESTIMATEModel.Store.SelayInformation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="ESTIMATEModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_EmpolyInfo_EmpolyDipartment" Association="ESTIMATEModel.Store.FK_EmpolyInfo_EmpolyDipartment">
+      <End Role="EmpolyDipartment" EntitySet="EmpolyDipartment" />
+      <End Role="EmpolyInfo" EntitySet="EmpolyInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemInfo_CatagoryInfo" Association="ESTIMATEModel.Store.FK_ItemInfo_CatagoryInfo">
+      <End Role="CatagoryInfo" EntitySet="CatagoryInfo" />
+      <End Role="ItemInfo" EntitySet="ItemInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderInfo_CustomarInfo" Association="ESTIMATEModel.Store.FK_OrderInfo_CustomarInfo">
+      <End Role="CustomarInfo" EntitySet="CustomarInfo" />
+      <End Role="OrderInfo" EntitySet="OrderInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderInfo_ItemInfo" Association="ESTIMATEModel.Store.FK_OrderInfo_ItemInfo">
+      <End Role="ItemInfo" EntitySet="ItemInfo" />
+      <End Role="OrderInfo" EntitySet="OrderInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleInfo_CatagoryInfo" Association="ESTIMATEModel.Store.FK_SaleInfo_CatagoryInfo">
+      <End Role="CatagoryInfo" EntitySet="CatagoryInfo" />
+      <End Role="SaleInfo" EntitySet="SaleInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleInfo_CustomarInfo" Association="ESTIMATEModel.Store.FK_SaleInfo_CustomarInfo">
+      <End Role="CustomarInfo" EntitySet="CustomarInfo" />
+      <End Role="SaleInfo" EntitySet="SaleInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SelayInformation_EmpolyInfo" Association="ESTIMATEModel.Store.FK_SelayInformation_EmpolyInfo">
+      <End Role="EmpolyInfo" EntitySet="EmpolyInfo" />
+      <End Role="SelayInformation" EntitySet="SelayInformation" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CatagoryInfo">
+    <Key>
+      <PropertyRef Name="CatagoryId" />
+    </Key>
+    <Property Name="CatagoryId" Type="int" Nullable="false" />
+    <Property Name="C_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CustomarInfo">
+    <Key>
+      <PropertyRef Name="CustomarId" />
+    </Key>
+    <Property Name="CustomarId" Type="int" Nullable="false" />
+    <Property Name="C_Name" Type="varchar" MaxLength="50" />
+    <Property Name="C_Address" Type="varchar" MaxLength="50" />
+    <Property Name="C_Phone" Type="int" />
+    <Property Name="C_Type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EmpolyDipartment">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EmpolyInfo">
+    <Key>
+      <PropertyRef Name="EmpolyId" />
+    </Key>
+    <Property Name="EmpolyId" Type="int" Nullable="false" />
+    <Property Name="E_Name" Type="varchar" MaxLength="50" />
+    <Property Name="E_Address" Type="varchar" MaxLength="50" />
+    <Property Name="E_DateOfBirth" Type="date" />
+    <Property Name="E_JoinDate" Type="date" />
+    <Property Name="E_Phone" Type="int" />
+    <Property Name="E_Department" Type="int" />
+  </EntityType>
+  <EntityType Name="ItemInfo">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="int" Nullable="false" />
+    <Property Name="I_Name" Type="varchar" MaxLength="50" />
+    <Property Name="I_CatagoryId" Type="int" />
+    <Property Name="I_ExoDate" Type="date" />
+    <Property Name="I_MgfDate" Type="date" />
+    <Property Name="I_BuyPrice" Type="money" />
+  </EntityType>
+  <EntityType Name="number">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OrderInfo">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="CustomarId" Type="int" />
+    <Property Name="ItemId" Type="int" />
+    <Property Name="OrderDate" Type="date" />
+    <Property Name="DeliveryDate" Type="date" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="AdvancePay" Type="money" />
+    <Property Name="TotalMoney" Type="money" />
+  </EntityType>
+  <EntityType Name="SaleInfo">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="int" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="UnitPrice" Type="money" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="SaleDate" Type="date" />
+    <Property Name="ItemName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SelayInformation">
+    <Key>
+      <PropertyRef Name="SelaryId" />
+    </Key>
+    <Property Name="SelaryId" Type="int" Nullable="false" />
+    <Property Name="EmployId" Type="int" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Department" Type="int" />
+    <Property Name="Ammount" Type="money" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_EmpolyInfo_EmpolyDipartment">
+    <End Role="EmpolyDipartment" Type="ESTIMATEModel.Store.EmpolyDipartment" Multiplicity="0..1" />
+    <End Role="EmpolyInfo" Type="ESTIMATEModel.Store.EmpolyInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpolyDipartment">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="EmpolyInfo">
+        <PropertyRef Name="E_Department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemInfo_CatagoryInfo">
+    <End Role="CatagoryInfo" Type="ESTIMATEModel.Store.CatagoryInfo" Multiplicity="0..1" />
+    <End Role="ItemInfo" Type="ESTIMATEModel.Store.ItemInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatagoryInfo">
+        <PropertyRef Name="CatagoryId" />
+      </Principal>
+      <Dependent Role="ItemInfo">
+        <PropertyRef Name="I_CatagoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderInfo_CustomarInfo">
+    <End Role="CustomarInfo" Type="ESTIMATEModel.Store.CustomarInfo" Multiplicity="0..1" />
+    <End Role="OrderInfo" Type="ESTIMATEModel.Store.OrderInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomarInfo">
+        <PropertyRef Name="CustomarId" />
+      </Principal>
+      <Dependent Role="OrderInfo">
+        <PropertyRef Name="CustomarId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderInfo_ItemInfo">
+    <End Role="ItemInfo" Type="ESTIMATEModel.Store.ItemInfo" Multiplicity="0..1" />
+    <End Role="OrderInfo" Type="ESTIMATEModel.Store.OrderInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemInfo">
+        <PropertyRef Name="ItemId" />
+      </Principal>
+      <Dependent Role="OrderInfo">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleInfo_CatagoryInfo">
+    <End Role="CatagoryInfo" Type="ESTIMATEModel.Store.CatagoryInfo" Multiplicity="0..1" />
+    <End Role="SaleInfo" Type="ESTIMATEModel.Store.SaleInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatagoryInfo">
+        <PropertyRef Name="CatagoryId" />
+      </Principal>
+      <Dependent Role="SaleInfo">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleInfo_CustomarInfo">
+    <End Role="CustomarInfo" Type="ESTIMATEModel.Store.CustomarInfo" Multiplicity="0..1" />
+    <End Role="SaleInfo" Type="ESTIMATEModel.Store.SaleInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomarInfo">
+        <PropertyRef Name="CustomarId" />
+      </Principal>
+      <Dependent Role="SaleInfo">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SelayInformation_EmpolyInfo">
+    <End Role="EmpolyInfo" Type="ESTIMATEModel.Store.EmpolyInfo" Multiplicity="0..1" />
+    <End Role="SelayInformation" Type="ESTIMATEModel.Store.SelayInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpolyInfo">
+        <PropertyRef Name="EmpolyId" />
+      </Principal>
+      <Dependent Role="SelayInformation">
+        <PropertyRef Name="EmployId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_ItemSelection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>
